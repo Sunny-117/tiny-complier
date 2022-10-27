@@ -1,5 +1,6 @@
 export enum TokenTypes {
-    Paren
+    Paren,
+    Name
 }
 interface Token {
     type: TokenTypes;
@@ -16,5 +17,6 @@ export function tokenizer(code: string) {
             value: char
         })
     }
+    const LETTERS = /[a-z]/i
     return tokens
 }   
