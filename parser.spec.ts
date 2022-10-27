@@ -63,49 +63,49 @@ describe("parser", () => {
     expect(parser(tokens)).toEqual(ast);
   });
 
-  // it("name", () => {
-  //   const tokens = [{ type: TokenTypes.String, value: "hello" }];
+  it("name", () => {
+    const tokens = [{ type: TokenTypes.String, value: "hello" }];
 
-  //   const ast = {
-  //     type: NodeTypes.Program,
-  //     body: [
-  //       {
-  //         type: NodeTypes.StringLiteral,
-  //         value: "hello",
-  //       },
-  //     ],
-  //   };
-  //   expect(parser(tokens)).toEqual(ast);
-  // });
+    const ast = {
+      type: NodeTypes.Program,
+      body: [
+        {
+          type: NodeTypes.StringLiteral,
+          value: "hello",
+        },
+      ],
+    };
+    expect(parser(tokens)).toEqual(ast);
+  });
 
-  // it("call expression (add 1 1)", () => {
-  //   const tokens = [
-  //     { type: TokenTypes.Paren, value: "(" },
-  //     { type: TokenTypes.Name, value: "add" },
-  //     { type: TokenTypes.Number, value: "1" },
-  //     { type: TokenTypes.Number, value: "1" },
-  //     { type: TokenTypes.Paren, value: ")" },
-  //   ];
-  //   const ast = {
-  //     type: NodeTypes.Program,
-  //     body: [
-  //       {
-  //         type: NodeTypes.CallExpression,
-  //         name: "add",
-  //         params: [
-  //           {
-  //             type: NodeTypes.NumberLiteral,
-  //             value: "1",
-  //           },
-  //           {
-  //             type: NodeTypes.NumberLiteral,
-  //             value: "1",
-  //           },
-  //         ],
-  //       },
-  //     ],
-  //   };
+  it("call expression (add 1 1)", () => {
+    const tokens = [
+      { type: TokenTypes.Paren, value: "(" },
+      { type: TokenTypes.Name, value: "add" },
+      { type: TokenTypes.Number, value: "1" },
+      { type: TokenTypes.Number, value: "1" },
+      { type: TokenTypes.Paren, value: ")" },
+    ];
+    const ast = {
+      type: NodeTypes.Program,
+      body: [
+        {
+          type: NodeTypes.CallExpression,
+          name: "add",
+          params: [
+            {
+              type: NodeTypes.NumberLiteral,
+              value: "1",
+            },
+            {
+              type: NodeTypes.NumberLiteral,
+              value: "1",
+            },
+          ],
+        },
+      ],
+    };
 
-  //   expect(parser(tokens)).toEqual(ast);
-  // });
+    expect(parser(tokens)).toEqual(ast);
+  });
 });
