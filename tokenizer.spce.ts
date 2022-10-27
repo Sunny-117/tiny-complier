@@ -1,3 +1,4 @@
+import { test, expect } from 'vitest'
 test('tokenizer', () => {
     const code = `(add 2 (subtract 4 2))`
     const tokens = [
@@ -11,5 +12,5 @@ test('tokenizer', () => {
         { type: 'paren', value: ')' },
         { type: 'paren', value: ')' },
     ]
-    tokenizer(code)
+    expect(tokenizer(code)).toEqual(tokens)
 })
