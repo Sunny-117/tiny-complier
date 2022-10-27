@@ -18,5 +18,12 @@ export function tokenizer(code: string) {
         })
     }
     const LETTERS = /[a-z]/i
+    if (LETTERS.test(char)) {
+        let value = ''
+        while (LETTERS.test(char)) {
+            char = code[++current];
+            value += char
+        }
+    }
     return tokens
 }   
