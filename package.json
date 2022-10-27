@@ -6,7 +6,8 @@
   "author": "付志强 <zhiqiangfu6@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "vitest --run"
+    "test": "vitest --run",
+    "all": "vitest watch tokenizer.spec.ts "
   },
   "dependencies": {
     "vitest": "^0.24.3"
