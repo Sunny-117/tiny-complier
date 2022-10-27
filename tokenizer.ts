@@ -18,12 +18,16 @@ export function tokenizer(code: string) {
                 type: TokenTypes.Paren,
                 value: char
             })
+            current++
+            continue
         }
         if (char === ')') {
             tokens.push({
                 type: TokenTypes.Paren,
                 value: char
             })
+            current++
+            continue
         }
         const LETTERS = /[a-z]/i
         if (LETTERS.test(char)) {
@@ -36,6 +40,8 @@ export function tokenizer(code: string) {
                 type: TokenTypes.Name,
                 value
             })
+            current++
+            continue
         }
         const NUMBERS = /[0-9]/
         if (NUMBERS.test(char)) {
@@ -48,6 +54,8 @@ export function tokenizer(code: string) {
                 type: TokenTypes.Number,
                 value
             })
+            current++
+            continue
         }
     }
     return tokens
