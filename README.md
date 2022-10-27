@@ -4,8 +4,6 @@
 
 https://github.com/jamiebuilds/the-super-tiny-compiler
 
-https://github.com/cuixiaorui/the-tutorial-super-tiny-compiler
-
 
 # 词法分析 tokenizer
 
