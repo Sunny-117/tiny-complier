@@ -6,7 +6,7 @@
   "author": "付志强 <zhiqiangfu6@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test":"vitest"
+    "test": "vitest --run"
   },
   "dependencies": {
     "vitest": "^0.24.3"
