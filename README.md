@@ -9,8 +9,6 @@ https://github.com/cuixiaorui/the-tutorial-super-tiny-compiler
 
 # 词法分析 tokenizer
 
-```
-
 
 # 语法分析 parser
 
