@@ -31,11 +31,11 @@ test('number', () => {
 test('(add 1 2)', () => {
     const code = `(add 1 2)`
     const tokens = [
-        { type: 'paren', value: '(' },
-        { type: 'name', value: 'add' },
-        { type: 'number', value: '1' },
-        { type: 'number', value: '2' },
-        { type: 'paren', value: ')' },
+        { type: TokenTypes.Paren, value: '(' },
+        { type: TokenTypes.Name, value: 'add' },
+        { type: TokenTypes.Number, value: '1' },
+        { type: TokenTypes.Number, value: '2' },
+        { type: TokenTypes.Paren, value: ')' },
     ]
     expect(tokenizer(code)).toEqual(tokens)
 })
