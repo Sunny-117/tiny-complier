@@ -13,6 +13,11 @@ export function tokenizer(code: string) {
     let current = 0;
     while (current < code.length) {
         let char = code[current];
+        const WHITESPACE = /\s/
+        if (WHITESPACE.test(char)) {
+            current++
+            continue
+        }
         if (char === '(') {
             tokens.push({
                 type: TokenTypes.Paren,
