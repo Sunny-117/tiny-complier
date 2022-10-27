@@ -3,15 +3,15 @@ import { tokenizer, TokenTypes } from './tokenizer'
 test('tokenizer', () => {
     const code = `(add 2 (substract 4 2))`
     const tokens = [
-        { type: 'paren', value: '(' },
-        { type: 'name', value: 'add' },
-        { type: 'number', value: '2' },
-        { type: 'paren', value: '(' },
-        { type: 'name', value: 'subtract' },
-        { type: 'number', value: '4' },
-        { type: 'number', value: '2' },
-        { type: 'paren', value: ')' },
-        { type: 'paren', value: ')' },
+        { type: TokenTypes.Paren, value: '(' },
+        { type: TokenTypes.Name, value: 'add' },
+        { type: TokenTypes.Number, value: '2' },
+        { type: TokenTypes.Paren, value: '(' },
+        { type: TokenTypes.Name, value: 'subtract' },
+        { type: TokenTypes.Number, value: '4' },
+        { type: TokenTypes.Number, value: '2' },
+        { type: TokenTypes.Paren, value: ')' },
+        { type: TokenTypes.Paren, value: ')' },
     ]
     expect(tokenizer(code)).toEqual(tokens)
 })
