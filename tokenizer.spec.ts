@@ -1,6 +1,16 @@
 import { test, expect } from 'vitest'
 import { tokenizer, TokenTypes } from './tokenizer'
-
+test('tokenizer', () => {
+    const code = `(add 2 (substract 4 2))`
+    const tokens = [
+        { type: TokenTypes.Paren, value: '(' },
+        { type: TokenTypes.Name, value: 'add' },
+        { type: TokenTypes.Number, value: '1' },
+        { type: TokenTypes.Number, value: '2' },
+        { type: TokenTypes.Paren, value: ')' },
+    ]
+    expect(tokenizer(code)).toEqual(tokens)
+})
 
 test('left paren', () => {
     const code = `(`
