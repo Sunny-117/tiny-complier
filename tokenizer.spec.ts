@@ -16,7 +16,14 @@ test.skip('tokenizer', () => {
     expect(tokenizer(code)).toEqual(tokens)
 })
 
-test('paren', () => {
+test('left paren', () => {
+    const code = `(`
+    const tokens = [
+        { type: TokenTypes.Paren, value: '(' },
+    ]
+    expect(tokenizer(code)).toEqual(tokens)
+})
+test('right paren', () => {
     const code = `(`
     const tokens = [
         { type: TokenTypes.Paren, value: '(' },
