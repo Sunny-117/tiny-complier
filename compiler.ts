@@ -8,3 +8,4 @@ export function compiler(code: string) {
   const transformedAst = transformer(ast);
   return codegen(transformedAst);
 }
+
