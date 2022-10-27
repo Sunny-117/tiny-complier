@@ -33,7 +33,7 @@ test("traverser", () => {
     ],
   };
 
-  const callCounts: Array<string | NodeTypes >[] = [];
+  const callCounts: Array<string | NodeTypes>[] = [];
   const visitor: Visitor = {
     Program: {
       enter(node, parent) {
@@ -47,6 +47,7 @@ test("traverser", () => {
     CallExpression: {
       enter(node, parent) {
         callCounts.push(["callExpression-enter", node.type, parent!.type]);
+        // !: 告诉 ts parent一定存在
       },
       exit(node, parent) {
         callCounts.push(["callExpression-exit", node.type, parent!.type]);
