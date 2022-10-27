@@ -9,7 +9,6 @@ https://github.com/cuixiaorui/the-tutorial-super-tiny-compiler
 
 # 词法分析 tokenizer
 
-tokens
 
 ```ts
 test('tokenizer', () => {
@@ -31,7 +30,51 @@ test('tokenizer', () => {
 
 # 语法分析 parser
 
-
+```ts
+ it("parser tokens to ast", () => {
+    const tokens = [
+      { type: TokenTypes.Paren, value: "(" },
+      { type: TokenTypes.Name, value: "add" },
+      { type: TokenTypes.Number, value: "2" },
+      { type: TokenTypes.Paren, value: "(" },
+      { type: TokenTypes.Name, value: "subtract" },
+      { type: TokenTypes.Number, value: "4" },
+      { type: TokenTypes.Number, value: "2" },
+      { type: TokenTypes.Paren, value: ")" },
+      { type: TokenTypes.Paren, value: ")" },
+    ];
+    const ast = {
+      type: NodeTypes.Program,
+      body: [
+        {
+          type: NodeTypes.CallExpression,
+          name: "add",
+          params: [
+            {
+              type: NodeTypes.NumberLiteral,
+              value: "2",
+            },
+            {
+              type: NodeTypes.CallExpression,
+              name: "subtract",
+              params: [
+                {
+                  type: NodeTypes.NumberLiteral,
+                  value: "4",
+                },
+                {
+                  type: NodeTypes.NumberLiteral,
+                  value: "2",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    };
+    expect(parser(tokens)).toEqual(ast);
+  });
+```
 
 # codegen&compiler 生成代码
 
