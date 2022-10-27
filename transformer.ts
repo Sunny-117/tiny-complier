@@ -45,7 +45,6 @@ export function transformer(ast: RootNode) {
             type: "NumberLiteral",
             value: node.value,
           };
-
           parent?.context?.push(numberNode);
         }
       },
