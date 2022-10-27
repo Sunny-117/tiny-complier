@@ -65,7 +65,6 @@ describe("parser", () => {
 
   it("name", () => {
     const tokens = [{ type: TokenTypes.String, value: "hello" }];
-
     const ast = {
       type: NodeTypes.Program,
       body: [
