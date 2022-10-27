@@ -23,3 +23,8 @@ test('paren', () => {
     ]
     expect(tokenizer(code)).toEqual(tokens)
 })
+test('add', () => {
+    const code = `add`
+    const tokens = [{ type: TokenTypes.Name, value: 'add' }]
+    expect(tokenizer(code)).toEqual(tokens)
+})
