@@ -28,3 +28,9 @@ test('add', () => {
     const tokens = [{ type: TokenTypes.Name, value: 'add' }]
     expect(tokenizer(code)).toEqual(tokens)
 })
+
+test('number', () => {
+    const code = `22`
+    const tokens = [{ type: TokenTypes.Number, value: '22' }]
+    expect(tokenizer(code)).toEqual(tokens)
+})
