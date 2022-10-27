@@ -3,7 +3,7 @@ export enum TokenTypes {
     Name,
     Number
 }
-interface Token {
+export interface Token {
     type: TokenTypes;
     value: string;
 
