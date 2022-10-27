@@ -5,6 +5,9 @@
   "repository": "https://github.91chi.fun/https://github.com/Sunny-117/tiny-complier.git",
   "author": "付志强 <zhiqiangfu6@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "test":"vitest"
+  },
   "dependencies": {
     "vitest": "^0.24.3"
   }
