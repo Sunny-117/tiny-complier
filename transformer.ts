@@ -6,7 +6,7 @@ export function transformer(ast: RootNode) {
     body: [],
   };
 
-  ast.context = newAst.body;
+  ast.context = newAst.body;// 新的字段，不要修改原来的结构
 
   traverser(ast, {
     CallExpression: {
