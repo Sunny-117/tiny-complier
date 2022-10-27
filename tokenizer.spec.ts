@@ -24,9 +24,9 @@ test('left paren', () => {
     expect(tokenizer(code)).toEqual(tokens)
 })
 test('right paren', () => {
-    const code = `(`
+    const code = `)`
     const tokens = [
-        { type: TokenTypes.Paren, value: '(' },
+        { type: TokenTypes.Paren, value: ')' },
     ]
     expect(tokenizer(code)).toEqual(tokens)
 })

@@ -18,29 +18,35 @@ export function tokenizer(code: string) {
             value: char
         })
     }
-    const LETTERS = /[a-z]/i
-    if (LETTERS.test(char)) {
-        let value = ''
-        while (LETTERS.test(char) && current < code.length) {
-            value += char
-            char = code[++current];
-        }
-        tokens.push({
-            type: TokenTypes.Name,
-            value
-        })
+    if (char === '') ') {
+    tokens.push({
+        type: TokenTypes.Paren,
+        value: char
+    })
+}
+const LETTERS = /[a-z]/i
+if (LETTERS.test(char)) {
+    let value = ''
+    while (LETTERS.test(char) && current < code.length) {
+        value += char
+        char = code[++current];
     }
-    const NUMBERS = /[0-9]/
-    if (NUMBERS.test(char)) {
-        let value = ''
-        while (NUMBERS.test(char) && current < code.length) {
-            value += char
-            char = code[++current];
-        }
-        tokens.push({
-            type: TokenTypes.Number,
-            value
-        })
+    tokens.push({
+        type: TokenTypes.Name,
+        value
+    })
+}
+const NUMBERS = /[0-9]/
+if (NUMBERS.test(char)) {
+    let value = ''
+    while (NUMBERS.test(char) && current < code.length) {
+        value += char
+        char = code[++current];
     }
-    return tokens
+    tokens.push({
+        type: TokenTypes.Number,
+        value
+    })
+}
+return tokens
 }   
