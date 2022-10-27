@@ -20,10 +20,14 @@ export function tokenizer(code: string) {
     const LETTERS = /[a-z]/i
     if (LETTERS.test(char)) {
         let value = ''
-        while (LETTERS.test(char)) {
+        while (LETTERS.test(char) && current < code.length) {
             char = code[++current];
             value += char
         }
+        tokens.push({
+            type: TokenTypes.Name,
+            value
+        })
     }
     return tokens
 }   
