@@ -11,4 +11,5 @@ test('tokenizer', () => {
         { type: 'paren', value: ')' },
         { type: 'paren', value: ')' },
     ]
+    tokenizer(code)
 })
