@@ -15,3 +15,11 @@ test.skip('tokenizer', () => {
     ]
     expect(tokenizer(code)).toEqual(tokens)
 })
+
+test('paren', () => {
+    const code = `(`
+    const tokens = [
+        { type: 'paren', value: '(' },
+    ]
+    expect(tokenizer(code)).toEqual(tokens)
+}_
