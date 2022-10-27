@@ -16,7 +16,6 @@ export function parser(tokens: Token[]) {
 
         if (token.type === TokenTypes.Number) {
             current++;
-
             return createNumberLiteralNode(token.value);
         }
 
