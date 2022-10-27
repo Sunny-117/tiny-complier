@@ -1,5 +1,9 @@
+enum TokenTypes {
+    Paren
+}
+
 interface Token {
-    type: string;
+    type: TokenTypes;
     value: string;
 
 }
