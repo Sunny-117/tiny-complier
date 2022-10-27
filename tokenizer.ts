@@ -21,8 +21,8 @@ export function tokenizer(code: string) {
     if (LETTERS.test(char)) {
         let value = ''
         while (LETTERS.test(char) && current < code.length) {
-            char = code[++current];
             value += char
+            char = code[++current];
         }
         tokens.push({
             type: TokenTypes.Name,
