@@ -1,3 +1,3 @@
-export function tokenizer(code) {
+export function tokenizer(code: string) {
 
 }   

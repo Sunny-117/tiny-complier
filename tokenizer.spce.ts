@@ -22,4 +22,4 @@ test('paren', () => {
         { type: 'paren', value: '(' },
     ]
     expect(tokenizer(code)).toEqual(tokens)
-}_
+})
