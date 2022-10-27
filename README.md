@@ -87,7 +87,7 @@ https://astexplorer.net/
 ![image-20221027151215974](./ast.png)
 
 
-父级不是表达式就会加一个
+父级不是表达式就会加一个`ExpressionStatement`
 # codegen&compiler 生成代码
 
 ![](./map.png)
