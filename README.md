@@ -79,6 +79,7 @@ test('tokenizer', () => {
 
 # traverser 遍历 AST
 
+![](./tree.png)
 # transform 转换 AST 
 
 https://astexplorer.net/
