@@ -12,8 +12,6 @@ export function tokenizer(code: string) {
     const tokens: Token[] = []
     let current = 0;
     while (current < code.length) {
-
-
         let char = code[current];
         if (char === '(') {
             tokens.push({
