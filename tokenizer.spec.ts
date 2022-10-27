@@ -29,7 +29,7 @@ test('number', () => {
 })
 
 test('(add 1 2)', () => {
-    const code = `(add 1 2)`
+    const code = `(add12)`
     const tokens = [
         { type: TokenTypes.Paren, value: '(' },
         { type: TokenTypes.Name, value: 'add' },
