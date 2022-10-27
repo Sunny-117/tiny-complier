@@ -4,7 +4,7 @@ import { parser } from "./parser";
 import { TokenTypes } from "./tokenizer";
 
 describe("parser", () => {
-  it.skip("parser tokens to ast", () => {
+  it("parser tokens to ast", () => {
     const tokens = [
       { type: TokenTypes.Paren, value: "(" },
       { type: TokenTypes.Name, value: "add" },
