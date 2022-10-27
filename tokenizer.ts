@@ -40,8 +40,6 @@ export function tokenizer(code: string) {
                 type: TokenTypes.Name,
                 value
             })
-            current++
-            continue
         }
         const NUMBERS = /[0-9]/
         if (NUMBERS.test(char)) {
@@ -54,8 +52,6 @@ export function tokenizer(code: string) {
                 type: TokenTypes.Number,
                 value
             })
-            current++
-            continue
         }
     }
     return tokens
