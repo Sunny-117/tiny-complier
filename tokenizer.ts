@@ -1,4 +1,4 @@
-enum TokenTypes {
+export enum TokenTypes {
     Paren
 }
 
@@ -15,7 +15,7 @@ export function tokenizer(code: string) {
     let char = code[current];
     if (char === '(') {
         tokens.push({
-            type: 'paren',
+            type: TokenTypes.Paren,
             value: char
         })
     }
