@@ -23,6 +23,9 @@ export function transformer(ast: RootNode) {
 
           node.context = expression.arguments;
 
+          /**
+           * 如果parent不是表达式，就加一个ExpressionStatement
+           */
           if (parent?.type !== NodeTypes.CallExpression) {
             expression = {
               type: "ExpressionStatement",
