@@ -8,7 +8,7 @@ https://github.com/jamiebuilds/the-super-tiny-compiler
 # 词法分析 tokenizer
 
 
-```ts
+```js
 test('tokenizer', () => {
     const code = `(add 2 (subtract 4 2))`
     const tokens = [
@@ -28,7 +28,7 @@ test('tokenizer', () => {
 
 # 语法分析 parser
 
-```ts
+```js
  it("parser tokens to ast", () => {
     const tokens = [
       { type: TokenTypes.Paren, value: "(" },
@@ -82,7 +82,7 @@ test('tokenizer', () => {
 
 https://astexplorer.net/
 
-![image-20221027151215974](./ast.png)
+![](./ast.png)
 
 
 父级不是表达式就会加一个`ExpressionStatement`
@@ -112,8 +112,6 @@ template 是如何编译成 render 函数的
 所以一个最好的学习方式就是先实现一个非常简单的 然后从简入深
 看得见摸得到的 demo 才能激发出兴趣来
 
-
-# 其他
 
 > 点阵转换
 
