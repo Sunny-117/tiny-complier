@@ -1,6 +1,6 @@
 import { expect, test } from "vitest";
-import { NodeTypes, RootNode } from "./ast";
-import { traverser, Visitor } from "./traverser";
+import { NodeTypes, RootNode } from "../src/ast";
+import { traverser, Visitor } from "../src/traverser";
 // 遍历树
 test("traverser", () => {
   const ast: RootNode = {

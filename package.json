@@ -2,12 +2,9 @@
   "name": "tiny-complier",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.91chi.fun/https://github.com/Sunny-117/tiny-complier.git",
-  "author": "付志强 <zhiqiangfu6@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "vitest --run",
-    "all": "vitest watch tokenizer.spec.ts "
+    "test": "vitest watch --run"
   },
   "dependencies": {
     "vitest": "^0.24.3"

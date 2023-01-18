@@ -1,6 +1,6 @@
-import { RootNode, NodeTypes } from "./ast";
+import { RootNode, NodeTypes } from "../src/ast";
 import { test, expect } from "vitest";
-import { transformer } from "./transformer";
+import { transformer } from "../src/transformer";
 test("transformer", () => {
   const originalAST: RootNode = {
     type: NodeTypes.Program,

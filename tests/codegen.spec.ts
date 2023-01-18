@@ -1,6 +1,6 @@
 import { test, expect } from "vitest";
-import { NodeTypes } from "./ast";
-import { codegen } from "./codegen";
+import { NodeTypes } from "../src/ast";
+import { codegen } from "../src/codegen";
 test("codegen", () => {
   const ast = {
     type: NodeTypes.Program,
