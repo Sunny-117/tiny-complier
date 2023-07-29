@@ -35,7 +35,7 @@ export function traverser(rootNode: RootNode, visitor: Visitor) {
       case NodeTypes.CallExpression://表达式
         traverArray(node.params, node);
         break;
-      case NodeTypes.NumberLiteral:
+      case NodeTypes.NumberLiteral:// 叶子结点
         break;
       default:
         break;
