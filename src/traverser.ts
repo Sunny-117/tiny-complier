@@ -29,10 +29,10 @@ export function traverser(rootNode: RootNode, visitor: Visitor) {
     }
 
     switch (node.type) {
-      case NodeTypes.Program:
+      case NodeTypes.Program:// 根结点
         traverArray(node.body, node);
         break;
-      case NodeTypes.CallExpression:
+      case NodeTypes.CallExpression://表达式
         traverArray(node.params, node);
         break;
       case NodeTypes.NumberLiteral:
